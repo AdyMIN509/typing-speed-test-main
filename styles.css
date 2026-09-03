@@ -50,6 +50,7 @@ header, body, footer {
 	max-width: 1216px;
 	width: 100%;
 	min-width: 343px;
+	margin: 0 auto;
 }
 
 /* header */
