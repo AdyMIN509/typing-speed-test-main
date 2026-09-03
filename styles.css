@@ -86,6 +86,7 @@ main {
 	display: flex;
 	flex-direction: column;
 	gap: 32px;
+	margin-bottom: 32px;
 }
 
 .top {
@@ -171,8 +172,9 @@ main {
 }
 
 .dropdown {
-	display: none;
-	flex-direction: column;
+	max-height: 0;
+	overflow: hidden;
+	z-index: 2;
 	border-radius: 8px;
 	background-color: var(--neutral-800);
 }
@@ -198,7 +200,7 @@ main {
 .setting-choice::before {
 	content: "";
 	position: absolute;
-	z-index: 1;
+	z-index: 3;
 	width: 16px;
 	height: 16px;
 	top: 50%;
@@ -237,7 +239,45 @@ input[type="radio"]:checked {
 	font-size: 2rem;
 	line-height: 136%;
 	letter-spacing: 0.4px;
-	z-index: -1;
+	position: relative;
+}
+
+.text-container {
+	padding: 10px;
+}
+
+.start-typing-container {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backdrop-filter: blur(7px);
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.start-typing-container .start-typing-btn {
+	padding: 16px 24px;
+	color: var(--neutral-0);
+	background-color: var(--blue-600);
+	border: 1px solid var(--blue-600);
+	border-radius: 12px;
+	font-family: var(--font-family);
+	font-size: 1.25rem;
+	transition: transform 0.3s ease;
+}
+
+.start-typing-container .start-typing-btn:hover {
+	transform: scale(1.1);
+}
+
+.start-typing-container p {
+	text-align: center;
+	color: var(--neutral-0);
+	font-size: 1.25rem;
 }
 
 .green-text {
@@ -259,6 +299,7 @@ footer {
 	padding: 24px 0 0 0;
 	display: flex;
 	justify-content: center;
+	border-top: 1px solid var(--neutral-500);
 }
 
 #restart-button {
@@ -272,6 +313,7 @@ footer {
 	font-family: var(--font-family);
 	border: none;
 	margin-bottom: 32px;
+	transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .restart-img {
@@ -280,4 +322,10 @@ footer {
 
 #restart-button:hover {
 	background-color: var(--green-600);
+	transform: scale(1.1);
+}
+
+/* STYLING */
+.arrow {
+	transition: transform 0.3s ease;
 }

@@ -11,7 +11,7 @@
 		<img class="logo" src="./assets/images/logo-small.svg" alt="" aria-hidden="true">
 		<span class="best-score">
 			<img src="./assets/images/icon-personal-best.svg" alt="" aria-hidden="true">
-			Best: <span class="best-score-value" id="best-score">92 WPM</span>
+			Best: <span class="best-score-value" id="best-score">0 WPM</span>
 		</span>
 	</header>
 	<main>
@@ -19,45 +19,49 @@
 			<div class="stats">
 				<div class="stat">
 					<span class="stat-title">WPM:</span>
-					<span class="stat-value white-stat">40</span>
+					<span id="wpm-stat" class="stat-value white-stat">0</span>
 				</div>
 				<div class="vertical-line"></div>
 				<div class="stat">
 					<span class="stat-title">Accuracy:</span>
-					<span class="stat-value red-stat">94%</span>
+					<span id="accuracy-stat" class="stat-value red-stat">0%</span>
 				</div>
 				<div class="vertical-line"></div>
 				<div class="stat">
 					<span class="stat-title">Time:</span>
-					<span class="stat-value yellow-stat">0:46</span>
+					<span id="time-stat" class="stat-value yellow-stat">0:00</span>
 				</div>
 			</div>
 			<div class="settings">
 				<div class="level setting">
-					<button type="button" class="setting-btn">
-						Hard
-						<img src="./assets/images/icon-down-arrow.svg" alt="">
+					<button type="button" class="setting-btn level" id="level-btn">
+						<span id="level-value"> Easy</span>
+						<img class="arrow" src="./assets/images/icon-down-arrow.svg" alt="" id="level-arrow">
 					</button>
-					<div class="dropdown">
+					<div class="dropdown" id="level-dropdown">
 						<label class="setting-choice" for="easy-level"><input type="radio" name="level" value="easy" id="easy-level">Easy</label>
 						<label class="setting-choice" for="medium-level"><input type="radio" name="level" value="medium" id="medium-level">Medium</label>
 						<label class="setting-choice" for="hard-level"><input type="radio" name="level" value="hard" id="hard-level">Hard</label>
 					</div>
 				</div>
 				<div class="mode setting">
-					<button type="button" class="setting-btn">
-						Timed (60s)
-						<img src="./assets/images/icon-down-arrow.svg" alt="">
+					<button type="button" class="setting-btn mode"  id="mode-btn">
+						<span id="mode-value">Timed (60s)</span>
+						<img  class="arrow" id="mode-arrow" src="./assets/images/icon-down-arrow.svg" alt="">
 					</button>
-					<div class="dropdown">
-						<label class="setting-choice" for="easy-level"><input type="radio" name="level" id="easy-level" value="timed">Timed (60s)</label>
-						<label class="setting-choice" for="medium-level"><input type="radio" name="level" id="medium-level" value="passage">Passage</label>
+					<div class="dropdown" id="mode-dropdown">
+						<label class="setting-choice" for="mode-timed"><input type="radio" name="mode" id="mode-timed" value="Timed (60s)">Timed (60s)</label>
+						<label class="setting-choice" for="mode-passage"><input type="radio" name="mode" id="mode-passage" value="Passage">Passage</label>
 					</div>
 				</div>
 			</div>
 		</div>
-		<div class="bottom" id="typing-container" contenteditable="true">
-			<span class="green-text">The chef believed that great cooking starts with</span><span class="red-text"> quality ingredients. She</span> <span class="current-char">v</span>isited local farmers each week, selecting vegetables at their peak ripeness. Her menu changed with the seasons, reflecting what the land offered. Diners appreciated the freshness they could taste in every bite.
+		<div class="bottom" id="typing-container">
+			<div class="start-typing-container" id="start-typing-container">
+				<button type="button" class="start-typing-btn">Start Typing Test</button>
+				<p>Or click the text and start typing</p>
+			</div>
+			<p class="text-container" id="text-container">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex pariatur atque accusamus dolor ab esse provident non harum? Pariatur culpa corporis maxime sequi ipsa quos aliquid at ea consectetur ad.</p>
 		</div>
 	</main>
 	<footer>
