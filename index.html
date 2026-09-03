@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <title>Frontend Mentor | Typing Speed Test</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<img class="logo" src="./assets/images/logo-small.svg" alt="" aria-hidden="true">
+		<span class="best-score">
+			<img src="./assets/images/icon-personal-best.svg" alt="" aria-hidden="true">
+			Best: <span class="best-score-value" id="best-score">92 WPM</span>
+		</span>
+	</header>
+	<main>
+		<div class="top">
+			<div class="stats">
+				<div class="stat">
+					<span class="stat-title">WPM:</span>
+					<span class="stat-value white-stat">40</span>
+				</div>
+				<div class="vertical-line"></div>
+				<div class="stat">
+					<span class="stat-title">Accuracy:</span>
+					<span class="stat-value red-stat">94%</span>
+				</div>
+				<div class="vertical-line"></div>
+				<div class="stat">
+					<span class="stat-title">Time:</span>
+					<span class="stat-value yellow-stat">0:46</span>
+				</div>
+			</div>
+			<div class="settings">
+				<div class="level setting">
+					<button type="button" class="setting-btn">
+						Hard
+						<img src="./assets/images/icon-down-arrow.svg" alt="">
+					</button>
+					<div class="dropdown">
+						<label class="setting-choice" for="easy-level"><input type="radio" name="level" value="easy" id="easy-level">Easy</label>
+						<label class="setting-choice" for="medium-level"><input type="radio" name="level" value="medium" id="medium-level">Medium</label>
+						<label class="setting-choice" for="hard-level"><input type="radio" name="level" value="hard" id="hard-level">Hard</label>
+					</div>
+				</div>
+				<div class="mode setting">
+					<button type="button" class="setting-btn">
+						Timed (60s)
+						<img src="./assets/images/icon-down-arrow.svg" alt="">
+					</button>
+					<div class="dropdown">
+						<label class="setting-choice" for="easy-level"><input type="radio" name="level" id="easy-level" value="timed">Timed (60s)</label>
+						<label class="setting-choice" for="medium-level"><input type="radio" name="level" id="medium-level" value="passage">Passage</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="bottom" id="typing-container" contenteditable="true">
+			<span class="green-text">The chef believed that great cooking starts with</span><span class="red-text"> quality ingredients. She</span> <span class="current-char">v</span>isited local farmers each week, selecting vegetables at their peak ripeness. Her menu changed with the seasons, reflecting what the land offered. Diners appreciated the freshness they could taste in every bite.
+		</div>
+	</main>
+	<footer>
+		<button type="button" id="restart-button" class="action-button">
+			Restart Test
+			<img class="restart-img" src="./assets/images/icon-restart.svg" alt="">
+		</button>
+	</footer>
+	<script src="app.js"></script>
+</body>
+</html>
